@@ -1,0 +1,132 @@
+body {
+  font-family: 'Courier New', monospace;
+  background-color: #000;
+  color: #00FF00;
+  overflow: hidden;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+canvas#matrix {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+#container {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 30px;
+  border: 2px solid #00FF00;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #00FF00;
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  animation: fadeIn 1s ease-out;
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+h1 {
+  color: #00FF00;
+  margin-bottom: 20px;
+  font-size: 24px;
+  animation: textGlow 1.5s infinite alternate;
+}
+
+@keyframes textGlow {
+  from {
+    text-shadow: 0 0 5px #00FF00, 0 0 10px #00FF00, 0 0 15px #00FF00;
+  }
+  to {
+    text-shadow: 0 0 20px #00FF00, 0 0 30px #00FF00, 0 0 40px #00FF00;
+  }
+}
+
+input,
+textarea {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 16px;
+  border: 1px solid #00FF00;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #000;
+  color: #00FF00;
+  transition: all 0.3s ease-in-out;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #00FF00;
+  box-shadow: 0 0 8px #00FF00;
+  outline: none;
+}
+
+button {
+  background-color: #000;
+  color: #00FF00;
+  border: 1px solid #00FF00;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #00FF00;
+  color: #000;
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 8px #00FF00;
+}
+
+button:active {
+  transform: scale(0.95);
+  background-color: #FF0000; /* Red on click */
+}
+
+.copy-btn {
+  margin-top: 10px;
+}
+
+.fade-in {
+  animation: textFadeIn 1s ease-in-out;
+}
+
+@keyframes textFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Different colors for encoded and decoded text */
+#output-text.encode {
+  color: #007BFF; /* Blue */
+}
+
+#output-text.decode {
+  color: #004E7A; /* Darker blue */
+}

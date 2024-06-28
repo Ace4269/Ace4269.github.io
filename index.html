@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Secret Code Encoder/Decoder</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <canvas id="matrix"></canvas>
+  <div id="container">
+    <h1>Secret Code Encoder/Decoder</h1>
+    <input id="input-text" type="text" placeholder="Enter your message">
+    <div>
+      <button id="encode-btn" class="action-btn">Encode</button>
+      <button id="decode-btn" class="action-btn">Decode</button>
+      <button id="clear-btn" class="action-btn">Clear</button>
+    </div>
+    <textarea id="output-text" readonly></textarea>
+    <button id="copy-btn" class="copy-btn" onclick="copyText()">Copy Encoded</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
